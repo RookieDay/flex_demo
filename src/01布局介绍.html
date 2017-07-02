@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3伸缩布局</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: '微软雅黑';
+            background-color: #f7f7f7;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrapper {
+            width: 1024px;
+            margin: 0 auto;
+        }
+
+        .wrapper>section {
+            min-height: 300px;
+            margin-bottom: 30px;
+            box-shadow: 1px 1px 4px #ddd;
+            background-color: #fff;
+        }
+
+        .wrapper>header {
+            text-align: center;
+            line-height: 1;
+            padding: 20px;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+
+        .wrapper section>header {
+            line-height: 1;
+            padding: 10px;
+            font-size: 22px;
+            color: #333;
+            background-color: #eee;
+        }
+
+        .wrapper .wrap-box {
+            padding: 20px;
+        }
+        .wrapper .brief{
+            min-height: auto;
+        }
+        .wrapper .flex-img {
+            width: 100%;
+        }
+
+        /*两端对齐 传统方法*/
+        section:nth-of-type(1) ul {
+            overflow: hidden;
+        }
+
+        section:nth-of-type(1) li {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+            float: left;
+            background-color: pink;
+            margin-right: 192px;
+            /*(1024 - 40 - 200*3) / 2*/
+        }
+
+        section:nth-of-type(1) li:last-child {
+            margin-right: 0;
+        }
+        /*新的写法*/
+
+        section:nth-of-type(2) ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        section:nth-of-type(2) li {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            CSS3 - 伸缩布局
+        </header>
+        <!--传统写法-->
+        <section>
+            <header>传统的 两端对齐布局</header>
+            <div class="wrap-box">
+                <p>需精确计算宽度 以及外边距</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+
+        <!--新写法-->
+        <section>
+            <header>Flex 两端对齐布局</header>
+            <div class="wrap-box">
+                <p>自动精准对齐 无需计算</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+
+        <!--新概念-->
+        <section>
+            <header>Flex布局</header>
+            <div class="wrap-box">
+                <img class="flex-img" src="../images/flex.png" alt="">
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

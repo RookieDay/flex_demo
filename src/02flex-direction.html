@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3伸缩布局</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <style>
+        .row ul {
+            flex-direction: row;
+        }
+
+        .column ul {
+            flex-direction: column;
+        }
+
+        .row-reverse ul {
+            flex-direction: row-reverse;
+        }
+
+        .column-reverse ul {
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            CSS3 - 伸缩布局
+        </header>
+        <!--简介-->
+        <section class="brief">
+            <header>flex-direction</header>
+            <div class="wrap-box">
+                <p>调整主轴方向（默认为水平方向）包括row、column、row-reverse、column-reverse</p>
+            </div>
+        </section>
+        <!--    -->
+        <section class="row">
+            <header>flex-direction</header>
+            <div class="wrap-box">
+                <p>调整主轴方向（默认为水平方向）</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="column">
+            <header>column</header>
+            <div class="wrap-box">
+                <p>取值为column时，垂直排列</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+        <section class="row-reverse">
+            <header>row-reverse</header>
+            <div class="wrap-box">
+                <p>取值为row-reverse时，水平反向排列</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="column-reverse">
+            <header>column-reverse</header>
+            <div class="wrap-box">
+                <p>取值column-reverse时，垂直反向排列</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

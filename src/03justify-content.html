@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3伸缩布局</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <style>
+        .flex-start ul{
+            justify-content: flex-start;
+        }
+        .flex-end ul{
+            justify-content: flex-end;
+        }
+        .center ul{
+            justify-content: center;
+        }
+        .space-around ul{
+            justify-content: space-around;
+        }
+        .space-between ul{
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>CSS3-伸缩布局详解</header>
+
+        <!-- 简介 -->
+        <section class="brief">
+            <header>justify-content</header>
+            <div class="wrap-box">
+                <p>主轴方向对齐，可以调整元素在主轴方向上的对齐方式，包括flex-start、flex-end、center、space-around、space-between几种方式</p>
+            </div>
+        </section>
+
+        <!-- 分隔线 -->
+        <section class="flex-start">
+            <header>flex-start</header>
+            <div class="wrap-box">
+                <p>起始点对齐</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="flex-end">
+            <header>flex-end</header>
+            <div class="wrap-box">
+                <p>终止点对齐</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="center">
+            <header>center</header>
+            <div class="wrap-box">
+                <p>居中对齐</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="space-around">
+            <header>space-around</header>
+            <div class="wrap-box">
+                <p>四周环绕</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="space-between">
+            <header>space-between</header>
+            <div class="wrap-box">
+                <p>两端对齐</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
