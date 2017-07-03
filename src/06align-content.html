@@ -11,7 +11,11 @@
         /*全局设置*/
 
         section ul {
+            height: 800px;
+            /*把所有ul指定成了伸缩盒子*/
             display: flex;
+            /*应用此属性必须要换行*/
+            flex-wrap: wrap;
         }
 
         section li {
@@ -24,25 +28,38 @@
         }
 
         .flex-start ul {
-            justify-content: flex-start;
+            align-content: flex-start;
         }
 
         .flex-end ul {
-            justify-content: flex-end;
+            align-content: flex-end;
         }
 
         .center ul {
-            justify-content: center;
+            align-content: center;
         }
 
         .space-around ul {
-            justify-content: space-around;
+            align-content: space-around;
         }
 
         .space-between ul {
-            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .stretch ul {
+            align-content: stretch;
         }
     </style>
+
+<!--
+flex-start：与交叉轴的起点对齐。
+flex-end：与交叉轴的终点对齐。
+center：与交叉轴的中点对齐。
+space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。
+space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
+stretch（默认值）：轴线占满整个交叉轴。
+-->
 </head>
 
 <body>
@@ -51,10 +68,11 @@
 
         <!-- 简介 -->
         <section class="brief">
-            <header>justify-content</header>
+            <header>align-content</header>
             <div class="wrap-box">
-                <p>主轴方向对齐，可以调整元素在主轴方向上的对齐方式，包括flex-start、flex-end、center、space-around、space-between几种方式</p>
+                <p>堆栈排列，可对应用flex-wrap: wrap后产生的换行进行控制，包括flex-start、flex-end、center、space-between、space-around、stretch</p>
             </div>
+
         </section>
 
         <!-- 分隔线 -->
@@ -66,6 +84,13 @@
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
                 </ul>
             </div>
         </section>
@@ -78,6 +103,13 @@
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
                 </ul>
             </div>
         </section>
@@ -90,6 +122,13 @@
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
                 </ul>
             </div>
         </section>
@@ -102,6 +141,13 @@
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
                 </ul>
             </div>
         </section>
@@ -114,6 +160,32 @@
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="stretch">
+            <header>stretch</header>
+            <div class="wrap-box">
+                <p>拉伸</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
                 </ul>
             </div>
         </section>

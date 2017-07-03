@@ -1,6 +1,6 @@
 ### 简单对flex的理解 
-[阮老师教程](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
-[codepen案例](https://codepen.io/LandonSchropp/pen/KpzzGo)
+- [阮老师教程](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+- [codepen案例](https://codepen.io/LandonSchropp/pen/KpzzGo)
 
 - 容器属性
 + flex-direction row | row-reverse | column | column-reverse; 主轴方向 即项目排列方向
@@ -19,7 +19,6 @@
 + flex-basis  定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小
 + flex flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto
 + align-self 允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性
-
 
 ```
 git clone git@github.com:RookieDay/flex_demo.git

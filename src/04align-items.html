@@ -9,9 +9,9 @@
     <link rel="stylesheet" type="text/css" href="../css/base.css">
     <style>
         /*全局设置*/
-
         section ul {
             display: flex;
+            min-height: 600px;
         }
 
         section li {
@@ -24,23 +24,24 @@
         }
 
         .flex-start ul {
-            justify-content: flex-start;
+            align-items: flex-start;
         }
 
         .flex-end ul {
-            justify-content: flex-end;
+            align-items: flex-end;
         }
 
         .center ul {
-            justify-content: center;
+            align-items: center;
         }
 
-        .space-around ul {
-            justify-content: space-around;
+        .stretch ul {
+            align-items: stretch;
         }
 
-        .space-between ul {
-            justify-content: space-between;
+        .stretch li {
+            /*因为全局样式写好一个200px，所以这些需要重写*/
+            height: auto;
         }
     </style>
 </head>
@@ -51,9 +52,9 @@
 
         <!-- 简介 -->
         <section class="brief">
-            <header>justify-content</header>
+            <header>align-items</header>
             <div class="wrap-box">
-                <p>主轴方向对齐，可以调整元素在主轴方向上的对齐方式，包括flex-start、flex-end、center、space-around、space-between几种方式</p>
+                <p>调整侧轴方向对齐方式，包括flex-start、flex-end、center、stretch</p>
             </div>
         </section>
 
@@ -61,7 +62,7 @@
         <section class="flex-start">
             <header>flex-start</header>
             <div class="wrap-box">
-                <p>起始点对齐</p>
+                <p>侧轴起始点对齐</p>
                 <ul>
                     <li>1</li>
                     <li>2</li>
@@ -73,7 +74,7 @@
         <section class="flex-end">
             <header>flex-end</header>
             <div class="wrap-box">
-                <p>终止点对齐</p>
+                <p>侧轴终止点对齐</p>
                 <ul>
                     <li>1</li>
                     <li>2</li>
@@ -85,7 +86,7 @@
         <section class="center">
             <header>center</header>
             <div class="wrap-box">
-                <p>居中对齐</p>
+                <p>侧轴居中对齐</p>
                 <ul>
                     <li>1</li>
                     <li>2</li>
@@ -94,10 +95,10 @@
             </div>
         </section>
 
-        <section class="space-around">
-            <header>space-around</header>
+        <section class="stretch">
+            <header>stretch</header>
             <div class="wrap-box">
-                <p>四周环绕</p>
+                <p>stretch</p>
                 <ul>
                     <li>1</li>
                     <li>2</li>
@@ -106,17 +107,6 @@
             </div>
         </section>
 
-        <section class="space-between">
-            <header>space-between</header>
-            <div class="wrap-box">
-                <p>两端对齐</p>
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                </ul>
-            </div>
-        </section>
     </div>
 </body>
 
