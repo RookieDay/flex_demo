@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3伸缩布局</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <style>
+        /*全局设置*/
+        section ul {
+            display: flex;
+        }
+
+        section li {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            margin: 10px;
+            background-color: pink;
+        }
+
+        .flex121 li:nth-child(1) {
+            flex: 1;
+        }
+
+        .flex121 li:nth-child(2) {
+            flex: 3;
+        }
+
+        .flex121 li:nth-child(3) {
+            flex: 1;
+        }
+
+        .flex21 li:nth-child(1) {
+            width: 600px;
+        }
+
+        .flex21 li:nth-child(2) {
+            flex: 2;
+        }
+
+        .flex21 li:nth-child(3) {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>CSS3-伸缩布局详解</header>
+        <!-- 简介 -->
+        <section class="brief">
+            <header>flex</header>
+            <div class="wrap-box">
+                <p>控制子元素伸缩比例</p>
+            </div>
+        </section>
+
+        <!-- 分隔线 -->
+        <section class="flex121">
+            <header>flex121</header>
+            <div class="wrap-box">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="flex21">
+            <header>flex21</header>
+            <div class="wrap-box">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
