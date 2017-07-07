@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3伸缩布局</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <style>
+        /*全局设置*/
+
+        section ul {
+            display: flex;
+            min-height: 500px;
+        }
+
+        section li {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            margin: 10px;
+            background-color: pink;
+        }
+        .flex-start ul{
+            align-items: center;
+        }
+        .flex-start li:nth-child(2){
+            align-self: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>CSS3-伸缩布局详解</header>
+        <!-- 简介 -->
+        <section class="brief">
+            <header>align-self</header>
+            <div class="wrap-box">
+                <p>同align-items可覆盖父元素设置的algin-items，包括flex-start、flex-end、center、stretch</p>
+            </div>
+        </section>
+
+        <!-- 分隔线 -->
+        <section class="flex-start">
+            <header>flex-start</header>
+            <div class="wrap-box">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="center">
+            <header>center</header>
+            <div class="wrap-box">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
