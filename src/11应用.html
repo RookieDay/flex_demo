@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3伸缩布局</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <style>
+        /*全局设置*/
+        section ul {
+            display: flex;
+        }
+
+        section:nth-child(2) ul {
+            width: 500px;
+            height: 50px;
+            display: flex;
+        }
+
+        section:nth-child(2) li {
+            flex: 1;
+            text-align: center;
+            line-height: 50px;
+            background-color: pink;
+        }
+        /*经典网页布局*/
+
+        .layout {
+            width: 400px;
+            height: 600px;
+            display: flex;
+            /*外面盒子需要垂直排列*/
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .layout .header {
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            background-color: green;
+        }
+
+        .layout .main {
+            flex: 1;
+            display: flex;
+            text-align: center;
+            /*overflow: scroll;*/
+        }
+
+        .layout .main .aside {
+            flex: 1;
+            background-color: blue;
+        }
+
+        .layout .main .content {
+            flex: 2;
+            background-color: yellow;
+        }
+
+        .layout .footer {
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>CSS3-伸缩布局应用</header>
+        <!-- 分隔线 -->
+        <section>
+            <header>自适应导航</header>
+            <div class="wrap-box">
+                <ul>
+                    <li>QQ聊天</li>
+                    <li>商品分类</li>
+                    <li>我的订单</li>
+                    <li>购物车</li>
+                </ul>
+            </div>
+        </section>
+        <!-- 分隔线 -->
+        <section>
+            <header>经典网页布局</header>
+            <div class="wrap-box">
+                <!-- 分隔线 -->
+                <div class="layout">
+                    <div class="header">头部</div>
+                    <div class="main">
+                        <div class="aside">侧边栏</div>
+                        <div class="content">主体内容</div>
+                    </div>
+                    <div class="footer">底部</div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
